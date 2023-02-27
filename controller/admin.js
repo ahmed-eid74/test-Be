@@ -6,7 +6,7 @@ const path = require('path')
 const fs = require('fs')
 
 exports.getTasks = (req, res, next) => {
-    const currentPage = req.query.page,
+    const currentPage = req.query.page
         limit = req.query.limit;
     let totalItems;
     taskSchema.find(res.locals.filter).countDocuments().then(search => {
